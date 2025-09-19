@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><table border="2">
+    <tr>
+        <td>5.DNS(DOMAIN NAME SYSTEM)</td>
+    </tr>
+</table>
+</h1>
+<br> <br>
+<h2>DNS is the global, distributed system that translates the human-friendly domain names into the computer-friendly IP addresses. Without it, you'd have to memorize hundreds of IP addresses to browse the web.</h2>
+<img src="DNS-SERVER.jpg" alt="DNS IMAGE" height="300px " width="600px">
+<h2>
+Step 1: Checking the Local Cache <br>
+
+Before doing extra work, your computer first checks if it already knows the website's IP address to save time. It checks in this order:
+<br> <br>
+1.Browser Cache: Recently visited websites saved in your browser.
+<br>
+2.OS Cache: Stored by your computer’s operating system.
+<br>
+3.Router Cache: Sometimes saved in your Wi-Fi router.
+<br>
+
+If found here: Your browser connects immediately, making the website load much faster.</h2>
+
+<h2>
+Step 2: The Recursive Resolver
+<br>
+If the IP address isn’t in any local cache, your computer asks a Recursive DNS Resolver for help.
+<ol>
+<li>Who It Is:</li>
+<ul><li>Usually provided by your ISP.</li>
+    <li>Or you can use public ones like Google (8.8.8.8) or Cloudflare (1.1.1.1).
+</li>
+</ul>
+
+
+<li>Why "Recursive":</li>
+<ul>
+    <li>It does all the work to find the correct IP.</li>
+    <li>
+It searches step-by-step through the DNS system until it gets the final answer</li>
+</ul>
+</ul>
+</ol>
+
+Step 3: The Hierarchical Search (Global Phonebook)
+<br>
+
+The Recursive Resolver searches step-by-step through the DNS system to find the website’s IP:
+<ol>
+<li>Root Servers
+<ul>
+    <li>First stop: The resolver asks, “Where can I find .com domains?”
+</li>
+    <li>Root server replies with TLD server info.
+</li>
+</ul>
+
+
+ 
+<li>TLD Servers:</li><ul>
+<li>Next, it asks, “Where can I find google.com?”</li>
+<li>TLD server replies with Google’s authoritative server info.</li>
+ </ul>
+
+
+
+
+<li>Authoritative Server:</li> <ul>
+<li>Finally, it asks, “What is the IP for www.google.com?”</li>
+
+<li>Server replies: 142.250.72.206 (Google’s IP).
+</li></ul>
+
+</ol>
+
+
+
+Step 4: The Journey Back
+<ol>
+<li>Authoritative Server → Resolver: Sends the correct IP to the Recursive Resolver.</li>
+<li>Resolver Caches It: Stores the IP for a while (TTL) to answer future requests quickly.</li>
+<li>Resolver → Computer: Sends the IP to your computer’s operating system.
+</li>
+
+<li>Computer → Browser: Your OS gives the IP to the browser, so it can connect to the website.
+</li>
+</ol>
+
+Step 5: The Final Connection
+
+<ol>
+    <li>Your browser now has the IP address (e.g., 142.250.72.206).</li>
+    <li>It connects to the server on port 443 (HTTPS).</li>
+    <li>The browser asks “Please send me the webpage for www.google.com.”</li>
+    <li>The DNS process is done and the website starts loading. </li>
+</ol>
+
+The DNS process is complete.
+</h2>
+
+<h1> 
+<table border="1">
+  <tr>
+    <td>
+<a href="http://127.0.0.1:3000/intro.html?serverWindowId=35320b72-4b6b-4fc3-914f-568df411eb93"><h1>Go to this site </a></td>
+  </tr>
+</h1>
+
+</body>
+</html>

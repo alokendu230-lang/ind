@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML NOTES</title>
+</head>
+<body>
+    <h1><table border="2">
+    <tr>
+        <td>4. PORT NUMBER</td>
+    </tr>
+   </table> </h1><br> <br>
+<h2> 2.Port Number <br>
+   A port number helps your computer identify which app or service should handle the data coming in or going out.</p>
+<br>
+Example:
+<ul>
+<br>
+<li>We browsing uses Port 80 (HTTP).</li>
+<br>
+<li>
+Secure websites use Port 443 (HTTPS).</li>
+
+</ul>
+
+<img src="port.jpg" alt="PORT NUMBER IMAGE" height="300px" width="600px"><br>
+
+2.Works with IP Address <br>
+
+The IP address finds the device, and the port number finds the specific service or app on that device.
+<br>
+Example:
+<ul>
+<li>Your house address = IP address</li>
+
+<li>Room number = Port number</li></ul>
+<br> 
+
+
+3. 16-Bit Number <br>
+
+Port numbers are 16 bits long, which means they are stored using 16 ones and zeros in computer language.
+<br> <br>
+4. Unsigned Number
+<br>
+“Unsigned” means no negative numbers are allowed — only positive numbers.
+<br>
+<br>
+5. Range of Port Numbers<br>
+
+Since it’s 16-bit, there are 65,536 possible ports, numbered from 0 to 65,535.
+<br><br>
+
+
+6. Common Port Numbers,<br>
+
+Some ports are reserved for popular services, like:
+<br><ul>
+<li>80 → HTTP (Websites)</li>
+<li>443 → HTTPS (Secure websites)</li>
+<li>
+25 → Email (SMTP)</li>
+<li>
+21 → FTP (File Transfer)</li>
+
+
+
+<h2>The Practical Format: The Three Categories</h2>
+
+To prevent chaos, the internet authorities (IANA) have divided the 65,536 available ports into three categories. This is the most practical format for you as a developer to understand.
+<h2><table border="2">
+    <tr>
+        <td>Well-Known Ports (0 - 1023)
+<br><br></td>
+    </tr>
+   </table> </h2>
+
+
+<br><br>
+1.Reserved Ports: Used for important and common internet services.
+<br>
+
+2.Managed By IANA: Strictly controlled to keep them secure.
+<br>
+
+3.Admin Access Needed: You need admin or root permission to use these ports.
+<br>
+Examples:
+
+<li>21 → FTP (File Transfer)</li>
+<li>22 → SSH (Secure Login)</li>
+<li>25 → SMTP (Send Email)</li>
+
+<li>53 → DNS (Domain Name System)</li>
+<li>80 → HTTP (Web Traffic)</li>
+<li>443 → HTTPS (Secure Web Traffic)</li>
+
+<h2><table border="2">
+    <tr>
+        <td>Registered Ports (1024 - 49151)
+<br><br></td>
+    </tr>
+   </table> </h2>
+
+1.Purpose: Used by specific apps or services that are not as universal as well-known ports.
+<br>
+2.Registration: Developers can register a port with IANA to avoid conflicts.
+<br>
+3.No Admin Needed: You don’t need admin permissions to run apps on these ports.
+<br>
+Examples (For MERN Developers):
+
+<li>3000 → React / Node.js development servers</li>
+
+<li>3306 → MySQL database</li>
+
+<li>5432 → PostgreSQL database</li>
+
+<li>27017 → MongoDB database (default for MERN stack)
+</li>
+<li>8080 → Alternative web server port for testing
+</li>
+
+<h2><table border="2">
+    <tr>
+        <td>Dynamic / Private / Ephemeral Ports (49152 - 65535)
+<br><br></td>
+    </tr>
+   </table> </h2>
+
+
+
+
+1.Temporary Use: These ports are used only for short-term connections.
+<br>
+
+2.No Control: Not managed by IANA — anyone can use them.
+<br>
+3Used by Clients: When your browser or app connects to a server, your computer automatically picks a random port from this range.
+<br>
+4. Example:  
+<br>
+<br>
+<li>You visit google.com on port 443 (HTTPS).
+</li>
+<li>Your computer might use port 50231 as its temporary source port.
+</li>
+<br>
+
+5.Key Rule:
+<br>
+Servers never listen on these ports — they are for client-side communication only.
+
+</ul>
+
+<h1>
+THE END
+
+<h1><table border="2">
+    <tr>
+        <td><a href="intro.html"><h1>BACK TO THE MAIN PAGE</a> </td>
+    </tr>
+   </table> </h1>
+</h1>
+<p> Copyright &copy; 2025 All Rights Reserved</p>
+</body>
+</html>

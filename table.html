@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML  NOTES</title>
+</head>
+<body>
+    <h1><table border="2">
+    <tr>
+        <td>8. HTML NESTED LISTS AND TABLES</td>
+    </tr>
+   </table> </h1> 
+   <h1><li>Nested Lists in HTML</li></h1>
+ 
+    <h2>
+<p>A nested list is a type of list in HTML where one list is placed inside another list, creating a hierarchy of items. It helps organize information by showing main items along with their related sub-items. For example, you might have a main category like "Fruits" and, inside it, a list of specific fruits such as "Apples," "Bananas," and "Oranges." Nested lists can be made using either an unordered list (ul) with bullet points, an ordered list (ol) with numbers, or a combination of both. The inner list must always be placed inside a (li) (list item) tag of the outer list. Nested lists are useful for menus, outlines, recipes, or any content where a clear structure and hierarchy are needed.</p> </h2>
+
+<h2>Types of Nested Lists</h2>
+
+<h2><ul>
+<li> Nested lists are used to organize information in a structured way by placing one list inside another. There are three main types of nested lists in HTML, based on the combination of lists used:</li>
+</ul>
+ </h2>
+ <br>
+ <h2></p>
+    1. Nested Unordered List (UL inside UL)
+    <p>In this type, both the outer and inner lists use bullet points. It is commonly used for categories and subcategories.</p>
+
+
+
+Example:
+
+    </ol>
+<h2><table border="2">
+    SHOPPING LISTS
+    <tr>
+        <td>
+            <ul>
+  <li>Fruits
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Orange</li>
+    </ul>
+  </li>
+  <li>Vegetables
+    <ul>
+      <li>Carrot</li>
+      <li>Potato</li>
+    </ul>
+  </li>
+</ul>
+        </td>
+    </tr>
+   </table> </h1> 
+</ol><h2>
+
+
+2.Mixed Nested List (UL inside OL or OL inside UL)
+<p>In this type, one list uses numbers and the other uses bullets. This is often used when main steps are numbered, and sub-items are listed with bullet points.
+</p>
+
+ 
+</ul>
+</h2>
+ <h2><table border="2">
+    <tr>
+        <td><h2>Country List</h2>
+  <ul>
+    <li>India
+      <ul>
+        <li>Maharashtra
+          <ol>
+            <li>Mumbai</li>
+            <li>Pune</li>
+          </ol>
+        </li>
+        <li>Karnataka</li>
+        <li>Tamil Nadu</li>
+      </ul>
+    </li>
+
+    <li>Japan
+      <ul>
+        <li>Tokyo</li>
+        <li>Hokkaido
+          <ol>
+            <li>Sapporo</li>
+            <li>Asahikawa</li>
+            <li>Hakodate </li>
+          </ol>
+        </li>
+      </ul>
+    </li>
+
+</td>
+    </tr>
+   </table> </h2> 
+
+<h2>3. Nested Ordered List (OL inside OL)</h2>
+</h2>
+<h2><p>Here, both the outer and inner lists are numbered. It is useful when there is a strict step-by-step hierarchy.
+<br> 
+
+
+Example:</p>
+
+<h2><table border="2">
+    <tr>
+        <td><ol>
+  <li>Chapter 1(PROFIT AND LOSS)
+    <ol>
+      <li>Introduction</li>
+      <li>Basics</li>
+    </ol>
+  </li>
+  <li>Chapter 2(PERENTAGE)
+    <ol>
+      <li>Advanced Topics</li>
+      <li>Summary</li>
+    </ol>
+  </li>
+</ol>
+</td>
+    </tr>
+   </table> </h2> 
+
+<h1><ul><li>HMTL TABLES</li></ul>
+</h1>
+   <h2>An HTML table is used to display data in rows and columns.
+    <br>
+It is created using the (table tag)and is very useful for organizing structured information like schedules, prices, or reports.</h2>
+  
+ 
+<h2>
+  <table border="1">
+    <caption>Class 10 Results</caption>
+    
+    <tr>
+      <th>Roll No</th>
+      <th>Name</th>
+      <th>Marks</th>
+    </tr>
+    
+    <tr>
+      <td>1</td>
+      <td>Ravi</td>
+      <td>85</td>
+    </tr>
+    
+    <tr>
+      <td>2</td>
+      <td>Sneha</td>
+      <td>90</td>
+    </tr>
+    
+    
+    <tr>
+      <td>3</td>
+      <td>Aman</td>
+      <td>78</td>
+    </tr>
+    </h2></table>
+    <br>
+    <h2>HTML TABLE-COLSPAN</h2>
+    <h2>
+        <ul>
+            <li>Meaning: A cell spans across multiple columns.</li>
+            <li>Used when you want one cell to cover more than one column.</li>
+        </ul>
+    </h2>
+    
+    
+    <h2><table border="1">
+  <tr>
+    <th>River</th>
+    <th>Source</th>
+    <th>Mouth</th>
+  </tr>
+  <tr>
+    <td colspan="3">Ganga River Details</td>
+  </tr>
+</table>
+</h2>
+<br>
+<h2>HTML TABLE-ROWSPAN</h2>
+<h2>
+    <ul>
+        <li>Meaning: A cell spans across multiple rows.</li>
+        <li>Used when you want one cell to cover more than one row.</li>
+    </ul>
+</h2>
+<h2>
+    <table border="1">
+  <tr>
+    <th>River</th>
+    <th>State</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Ganga</td>
+    <td>Uttarakhand</td>
+  </tr>
+  <tr>
+    <td>Uttar Pradesh</td>
+  </tr>
+</table>
+
+</h2>
+    <h2>1.TABLE CELLS IN HTML</h2>
+    <h2><p>In HTML, a table cell is the smallest unit of data in a table.
+        <br>
+Each cell is created using either the <td> tag (for data) or the <th> tag (for headings).
+</p></h2>
+
+
+    <h2>Food Menu</h2>
+<h2>
+  <table border="1">
+    <tr>
+      <th>Dish</th>
+      <th>Category</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Pizza</td>
+      <td>Main Course</td>
+      <td>$8</td>
+    </tr>
+    <tr>
+      <td>Soup</td>
+      <td>Starter</td>
+      <td>$4</td>
+    </tr>
+    <tr>
+      <td>Ice Cream</td>
+      <td>Dessert</td>
+      <td>$3</td>
+    </tr>
+  </table>
+</h2>
+
+</h2>
+<br>
+<h2>2.TABLE ROWS IN HTML</h2>
+
+<h2>A row in a table is a horizontal line of cells.
+<br>
+It goes left to right and contains data entries for one record or category.</h2>
+<h2>
+     <table border="1">
+    <tr>
+      <td>Ganga</td>
+      <td>Yamuna</td>
+      <td>Brahmaputra</td>
+      <td>Godavari</td>
+      <td>Krishna</td>
+      <td>Kaveri</td>
+    </tr></table>
+
+    <br>
+    <h2>3.TABLE HEADERS</h2>
+<h2>
+    <ul>
+    <li>In HTML tables, a header is created using the <th> tag</li>
+    <li>It usually appears in the first row of the table.
+</li>
+    <li>By default, text inside <th> is bold and centered (without any CSS).
+
+</li>
+    <li>Headers tell you what the data below it represents</li>
+</ul>
+</h2>
+
+<h2>
+    <table border="1">
+    <tr>
+      <th>River</th>
+      <th>Source</th>
+      <th>Mouth</th>
+    </tr>
+    <tr>
+      <td>Ganga</td>
+      <td>Gangotri Glacier</td>
+      <td>Bay of Bengal</td>
+    </tr>
+    <tr>
+      <td>Yamuna</td>
+      <td>Yamunotri Glacier</td>
+      <td>Joins Ganga at Prayagraj</td>
+    </tr>
+  </table>
+
+</h2>
+
+<h2>4.TABLE BODY </h2>
+<h2><ul>
+    <li>
+It contains the main data rows of the table.
+    </li>
+    <li>Every <tr> (row) with <td> (data cells) usually goes inside <tbody>.</li>
+    <li>Without <tbody>, the table still works, but <tbody> helps organize code and is useful when styling or scriptin</li>
+    
+</ul>
+</h2>
+h1><table border="2">
+    <tr>
+        <td>
+            <img src="table body.png" alt="table footer iamge" height="500px" width="1000px">
+        </td>
+    </tr>
+   </table> </h1> 
+
+<h2>5.TABLE FOOTER</h2>
+<h2>
+    <ul>
+        <li>(tfoot) tag  means Table Footer in HTML</li>
+        <li>It is used to define a footer section for a table.</li>
+        <li>Usually placed after <tbody>, but browsers will render it at the bottom of the table even if written before.</li>
+        <li>It is meant for summary information like totals, averages, notes.</li>
+    </ul>
+    
+ 
+</h2>
+</h2>
+<h1>
+THE END
+
+<h1><table border="2">
+    <tr>
+        <td><a href="intro.html"><h1>BACK TO THE MAIN PAGE</a> </td>
+    </tr>
+   </table> </h1>
+</h1>
+<p> Copyright &copy; 2025 All Rights Reserved</p>
+</body>
+</html>

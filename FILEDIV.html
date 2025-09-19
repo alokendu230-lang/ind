@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML NOTES</title>
+</head>
+<body>
+    
+
+    <h1><table border="2">
+    <tr>
+        <td>FILE PATH IN HTML,HTML BoilerPlate Code,DIV + Class + ID</td>
+    </tr>
+   </table> </h1>
+<h1>File Path system</h1>
+    <h2>Step 1: The First Principle (The Fundamental Truth)
+        <p>A website is not just one single file.</p>
+        
+           <p>It is a collection of many files working together, like pieces of a puzzle.</p> <ul>
+            <li>HTML - The content and structure (headings, paragraphs, forms).</li>
+        <li>CSS -The design (colors, fonts, layouts).</li>
+        <li>JavaScript - The behavior (sliders, dropdowns, animations).</li>
+        <li>Assets → Images, videos, icons, fonts, PDFs.</li></ul>
+    </h2>
+<h2>
+    <p>Step 2: The Core Problem</p>
+    <ul>
+        <li>When your index.html wants to show an image, you might try (img src="logo.png" alt="Logo")but this only works if logo.png is in the same folder as index.html.
+        </li>
+        <li>But what if:the image is stored in an images/ folder → then the browser won’t find it unless you write:(Or if the image is hosted on another website → then you must give the full web address (URL))</li>
+        <li> If the image is hosted on another website - then you must give the full web address (URL)
+            (img src="https://example.com/assets/logo.png" alt="Logo")
+        </li>
+        
+        
+    </ul>
+    <h2>
+        The Solution → File Paths
+         <ul>
+            <li>The browser needs a clear, exact address to locate every file.
+</li>
+<li>That’s what a file path is: the “map” or “address” that tells the browser where the file lives.</li>
+         </ul>
+    </h2>
+</h2>
+<h1>
+    <h1><p>A. Relative File Paths (The Most Important for Your Projects)</p></h1>
+</h1>
+
+<h2>
+
+<p>A relative file path gives directions to a file starting from the location of the file you are currently in. You will use this 99% of the time for linking your own files together (images, CSS, other HTML pages).</p>
+    <h1><table border="1">
+    <tr>
+        <td> <img src="path.png" alt= "FILE PATH image" height="300px" width="800px"></td>
+
+    </tr>
+   </table> </h1>
+
+</h2>
+
+
+<h2>Here are the different scenarios:
+<p>Scenario 1: Linking to a file in the SAME folder</p>
+
+
+<ul>
+    <li>The Problem: You’re inside index.html and need to link to another page called about.html.</li>
+    <li>The Logic: Both files (index.html and about.html) live in the same folder (my-website/). Since they are “neighbors,” no extra directions are needed.</li>
+    <li>The Syntax: You simply write the filename in the link:</li>
+</ul>
+<h1><table border="1">
+    <tr>
+        <td> <img src="REN.png" alt= "FILEPATH" height="300px" width="600px"></td>
+
+    </tr>
+   </table> </h1>
+</h2>
+<h2>
+    Scenario 2 (Going Down into a subfolder)
+    
+</p> 
+    <ul>
+        <li>The Problem:
+You are inside index.html and need to display an image called logo.png.</li>
+        <li>The Logic:
+The image is stored inside a folder named images/.
+So, starting from index.html, you must go down into the images folder to reach the file.</li>
+        <li>The Syntax:
+Use the folder name, then a forward slash /, then the filename.</li>
+    </ul>
+</h2>
+<h1><table border="1">
+    <tr>
+        <td> <img src="im.png" alt= "FILEPATH" height="300px" width="600px"></td>
+
+    </tr>
+   </table> </h1>
+
+
+   <h2>
+    <p>Scenario 3: Linking to a file in a PARENT FOLDER (Going Up)</p>
+    <ul>
+    <p>The Problem:</p>
+        <li> You are in contact.html (which is inside pages/) and you want to display logo.png (which is inside images/).</li>
+        <p>The Logic:</p>
+        <li>From pages/contact.html, you cannot jump directly to images/.
+
+First, you must go up one level (out of the pages/ folder) to reach the main my-website/ folder.
+
+Then, from there, go down into images/ to reach logo.png.</li>
+<p>The Syntax:</p>
+        <li>
+
+../ --- means go up one level.
+
+After going up, you can enter the images/ folder.
+<h1><table border="1">
+    <tr>
+        <td> <img src="ig.png" alt= "FILEPATH" height="300px" width="600px"></td>
+
+    </tr>
+   </table> </h1>
+
+</li>
+    </ul>
+   </h2>
+   <h1><p>B. Absolute File Paths</p></h1>
+   <h2>An absolute file path gives the full, complete URL to a resource on the web. It starts with http:// or https://.
+    <p>When to use it:</p>
+    <p>You ONLY use absolute paths when you are linking to a resource that is NOT on your own website.</p>
+    <ul>
+        <li>Linking to another website.</li>
+        <li>Using a font from Google Fonts.</li>
+        <li>Using an image from an image-hosting service.</li>
+    </ul>
+    
+   </h2>
+<h1><table border="1">
+    <tr>
+        <td> <img src="cpa.png" alt= "FILEPATH" height="300px" width="600px"></td>
+
+    </tr>
+   </table> </h1>
+
+   <h1>The Critical "Why": Why not use absolute paths for your own files?</h1>
+   <h2><p>A beginner might be tempted to copy the full path from their computer, like this:  <br>
+    src="C:/Users/Raj/Desktop/my-website/images/logo.png"</p>
+    <p>This is a major mistake. This address only works on your computer. The moment you upload your website to a real web server, that path becomes meaningless and the image will be broken.</p>
+
+<p>Think of a web browser (like Chrome, Firefox, etc.) as a secure prison for the code it runs. This prison is called a "sandbox."</p>
+
+<ul>
+    <li>The Inmates: The HTML, CSS, and JavaScript code you load.</li>
+    <li>The Prison Walls:The browser itself</li>
+</ul>
+
+<p>The primary rule of this prison is: Code running inside the sandbox is NOT allowed to freely access the host computer's file system.</p>
+
+
+   </h2>
+
+<h2>
+    <p> The Core Problem: A Malicious Website </p>
+<p>
+Imagine if this security rule didn't exist. You could visit a malicious website, evil-website.com, and it could contain the following HTML:</p>
+</h2>
+
+<h1><table border="1">
+    <tr>
+        <td> <img src="cri.png" alt= "FILEPATH" height="300px" width="600px"></td>
+
+    </tr>
+   </table> </h1>
+
+
+   <h2>
+    <p>If the browser allowed this, the website could potentially read the contents of your private files, your photos, your documents—anything on your computer. It would be a catastrophic security disaster.
+
+</p>
+    <p>Relative paths, however, will always work because they describe the location of files relative to each other, no matter what computer or server they are on.</p>
+   </h2>
+   <h2>Summary / Rules of Thumb</h2>
+
+   <h2>
+    <ol>
+
+    <li>For Your Own Files (Internal Links): ALWAYS use Relative Paths.
+        <ul>
+            <li>- filename.html (Same folder)
+
+  </li>
+            <li> folder/filename.html (Go down)</li>
+            <li>../filename.html (Go up)</li>
+        </ul>
+    </li>
+    <li>For Other Websites' Files (External Links): ALWAYS use Absolute Paths.
+        <ul>
+            <li>https://www.example.com/page.html</li>
+        </ul>
+    </li>
+   </ol>
+   </h2>
+   <h2>Windows File System Basics
+<ol>
+    
+
+
+<li>Drives:
+    <ul><li>Windows organizes files into drives, each identified by a letter (C:, D:, E:).</li>
+    <li>Usually, C: is the main drive where Windows and most programs are installed</li></ul>
+</li>
+<li>Root:
+    <ul><li>Every absolute path begins with a drive letter + colon + backslash.</li>
+    <li>Example: C:\ - the starting point (root) of the C: drive.</li></ul>
+</li>
+<li>Directory Separator
+    <ul>
+        <li>Windows uses a backslash \ to separate folders and files.</li>
+    </ul>
+</li>
+</ol>
+<p> Step-by-Step Breakdown</p>
+<ul><li>C: -- Start at the root of the C: drive.
+</li>
+<li>Users → Enter the Users folder.
+</li>
+<li>JohnDoe → Enter the folder for the user JohnDoe</li>
+<li>Documents → Enter the Documents folder.</li>
+<li>report.docx → The file itself.</li>
+</ul>
+</h2>
+
+<h2>Absolute Path in macOS / Linux
+
+
+<ol>
+    
+
+
+<li> No Drives:
+    <ul><li>Unlike Windows (C:\, D:\), macOS/Linux has one unified file system..</li>
+    <li>Everything starts from a single root directory: /.</li></ul>
+</li>
+<li>Root:
+    <ul><li>Every absolute path begins with a drive letter + colon + backslash.</li>
+    <li>Example: C:\ - the starting point (root) of the C: drive.</li></ul>
+</li>
+<li>Directory Separator
+    <ul>
+        <li>Uses forward slash / instead of Windows’ backslash \.</li>
+        <li>(Same as in web URLs → easy to remember).</li>
+    </ul>
+</li>
+</ol>
+
+<p> Step-by-Step Breakdown</p>
+<ul><li>/ → Start at the absolute root of the file system
+</li>
+<li>Users → Go into the Users directory (this holds all user accounts).
+</li>
+<li>johndoe → Enter the folder for the user johndoe.</li>
+<li>Documents → Enter the Documents directory.</li>
+<li>report.docx → The file itself.</li>
+</ul>
+</h2>
+
+<h2>Summary of Key Differences
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Windows</th>
+        <th>macOS / Linux</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Starting Point (Root)</td>
+        <td>Drive Letter (e.g., C:\)</td>
+        <td>A single forward slash (/)</td>
+      </tr>
+      <tr>
+        <td>Directory Separator</td>
+        <td>Backslash (\)</td>
+        <td>Forward Slash (/)</td>
+      </tr>
+      <tr>
+        <td>Example</td>
+        <td>C:\Users\JohnDoe\Documents\report.docx</td>
+        <td>/Users/johndoe/Documents/report.docx</td>
+      </tr>
+    </tbody>
+  </table>
+</h2>
+
+
+<h1>HTML Boilerplate Code</h1>
+<h2>A browser cannot guess your intentions; it needs clear setup instructions before rendering a page. Simply writing &lt; Hello &gt; isn’t enough. The browser must know which version of HTML to use, the correct character encoding, the title for the tab, and how the page should adapt across devices. To solve this, we use an HTML boilerplate—a standard template that provides these essential details. It serves as the blueprint of every web page, ensuring the content is displayed consistently and correctly.</h2>
+<h2><ol>
+Let's break down each line and explain why it's necessary.
+<li>&lt;!DOCTYPE html &gt;
+    <ul>
+        <li>Problem: Browsers need to know which version of HTML rules to follow. Without it, they may fall back to outdated “quirks mode.</li>
+        <li>Solution: &lt;!DOCTYPE html &gt; tells the browser to use modern HTML5 standards for proper rendering.</li>
+    </ul>
+</li>
+<li>&lt;html lang="en"&gt;
+    <ul>
+        <li>Problem: The web is global, but browsers, search engines, and screen readers won’t know what language the page is written in by default.</li>
+        <li>Solution:  &lt;html lang="en"&gt; declares the page language (English in this case), improving SEO and accessibility.</li>
+    </ul>
+</li>
+<li> &lt;head &gt;
+<ul>
+    <li>Problem: We need a place for background setup information (like title, metadata, or linked stylesheets) that isn’t meant to be shown on the page.</li>
+    <li>Solution: The &lt;head &gt; element stores metadata and instructions for the browser, hidden from the user’s view.</li>
+</ul></li>
+
+<li> &lt;meta charset="UTF-8"&gt;
+<ul>
+        <li>Problem: Without a proper character set, special characters (₹, ©, é, etc.) may appear as broken or garbled text.</li>
+    <li>Solution: &lt;meta charset="UTF-8" &gt; the browser uses UTF-8, a universal encoding that supports characters from all languages.</li>
+</ul>
+</li>
+<li> &lt;meta name="viewport" ...&gt;
+<ul>
+        <li>Decides how the page looks on different screen sizes (phone, tablet, desktop).
+</li>
+    <li>width=device-width: Page width = device screen width
+    <li>initial-scale=1.0: Page opens at normal zoom (100%).</li>
+    <li>Without this, sites look tiny and zoomed-out on mobile.
+</li>
+<li>This tag = key for responsive design.
+</li>
+</ul>
+<li> &lt;title&gt; ... &lt;/title &gt;
+    <ul>
+        <li>Sets the page name that shows in:
+</li>
+        <li>Browser tab</li>
+        <li>Bookmarks.</li>
+        <li>Search engine results</li>
+        <li>Helps users recognize your page when many tabs are open.
+</li>
+<li>Important for SEO (search engines know what your page is about)</li>
+    </ul>
+</li>
+<li> &lt;body&gt; ... &lt;/body &gt;
+    <ul>
+        <li>This is the main container for everything users actually see.</li>
+        <li>Inside &lt;body &gt; you put:</li>
+
+        <li>Headings, paragraphs, text.
+</li>
+        <li>Tables, forms, buttons.
+
+</li>
+        <li>Images, videos, links.</li>
+        <li>Without &lt;body &gt;, your page is just metadata—no visible content.
+</li>
+    </ul>
+</li>
+<h1><table border="3">
+    <tr>
+        <td><img src="hmtl bolier.png" alt=" div image" height="300px" width="600px"></td>
+    </tr>
+   </table> </h1>
+</ol>
+<p>Conclusion: <br>
+The HTML boilerplate is not just a random collection of tags---it is the foundation of every webpage. Each tag has a clear purpose: some make the page display properly across devices, some help search engines understand your site, while others define the content that users actually see. Together, they ensure your webpage is mobile-friendly, user-friendly, and functional. That’s why the boilerplate is the non-negotiable starting point whenever you create a new webpage.</p>
+
+</h2>
+
+<h2>But website work even without Boilerplate</h2>
+<h2>
+    <ol>
+        <li>No &lt;!DOCTYPE html &gt; - Quirks Mode
+            <ul>
+                <li>Browser doesn’t know the HTML version.</li>
+            <li>It switches to quirks mode (imitates old browsers).</li>
+            <li>Simple tags may work fine, but layouts with CSS can break.</li></ul>
+
+        </li>
+
+        <li>No &lt;html&gt; or &lt;body &gt;-- Browser adds them
+            <ul>
+                <li>Browser sees tags like &lt;h1&gt; li>
+                <li>It guesses the missing structure and creates &lt;html &gt;, &lt;head &gt; &lt;body &gt; internally.</li>
+            </ul>
+        </li>
+    
+    <li>&lt;No meta charset="UTF-8"&gt - Browser guesses
+        <ul><li>    Browser tries to detect the text encoding.
+</li>
+        <li>Works for basic English, but special characters (€, —, ’) may break if guessed wrong.
+</li></ul>
+    </li>
+
+    <li>No &lt;title &gt;→ Uses filename
+        <ul><li>If you don’t set a title, the browser shows the file name (e.g., index.html) in the tab.</li></ul>
+    </li>
+    </ol>
+
+</h2>
+<h2> So, Why Use a Boilerplate if the Browser Fixes Everything?
+<p>You're right that for a simple "Hello World" page, it looks the same. But the boilerplate isn't about making a simple page look right; it's about making a professional, reliable, and future-proof website</p>
+
+
+Here is why you're playing with fire by omitting it:
+
+<p>1. Unpredictable Rendering (Quirks Mode): The biggest danger. Your CSS might work differently across Chrome, Firefox, and Safari because each browser has its own slightly different implementation of quirks mode. What looks good on your machine might look broken on someone else's. Using &lt;!DOCTYPE html&gt; puts all browsers into Standards Mode, which is predictable and consistent.</p>
+<p>2. Broken Characters: Your site might look fine until you need to write "50€" or "resumé". Without charset="UTF-8", those characters can easily break, making your site look unprofessional.</p>
+<p>3. Bad Mobile Experience: Without the <meta name="viewport"> tag, your website will be almost unusable on a mobile phone. It will appear as a tiny, zoomed-out version of the desktop site.</p>
+<p>4. Poor SEO and Accessibility: Search engines and screen readers rely on the boilerplate tags (lang, title) to understand your page. A page without them is a "mystery document." It will rank lower in search results and be more difficult for users with disabilities to navigate</h2>
+</p>
+<h2>Conclusion:
+<br>
+<p>You can build a shack with a few pieces of wood and no foundation, and it might stand up on a calm day. The boilerplate is the proper engineering foundation. It ensures your house (website) will stand up in any weather (any browser), is accessible to everyone (screen readers), is easy to find (SEO), and works on any size of land (any device)</p>
+</h2>
+
+
+<h2>
+    <ol>
+       <h2><li>The &lt;div&gt; (The Generic Box)</h2> 
+        
+            <p>First Principle (Fundamental Truth):
+</p><ul>
+    <li>We need a way to group multiple elements (&lt;h1&gt;, &lt;p&gt;, &lt;img&gt;, etc.) into one single unit</li>
+</ul>
+</li>
+    </ol>
+    <h2>The Core Problem:
+</h2>
+<h2>
+<ol>Suppose you create a user profile card with:
+</li>
+<li>An image &lt;img&gt;
+</li>
+<li>A name &lt;hw&gt;
+</li>
+<li>A short bio &lt;p&gt;</li>
+</h2>
+</ol>
+<h1><table border="3">
+    <tr>
+        <td><img src="divdiv.png" alt=" div image" height="300px" width="600px"></td>
+    </tr>
+   </table> </h1>
+</h2>
+<h2><ul>
+    The Solution:
+<li>Wrap them inside a &lt;div&gt;.</li>
+
+<li>his  &lt;div&gt; acts like a container box.</li>
+<li>You can now style or move the whole block as one unit.
+</h2>
+</li>
+
+
+</ul>
+<h1><table border="3">
+    <tr>
+        <td><img src="new div.png" alt=" div image" height="300px" width="600px"></td>
+    </tr>
+   </table> </h1>
+</h2>
+<h1><p>2.class and id (The Labels for the Box)</p></h1>
+<h2>
+   
+
+<p>The Problem</p>
+<ul>
+    <li>Your webpage might contain many &lt;div&gt; s—ten profile cards, a sidebar, a main content area, and a photo gallery. But how do you tell the browser which specific box you want to style or control? For example, you may want all profile cards to have a gray background, but only the featured profile card to have a gold border. Without a proper system, the browser cannot differentiate between these different &lt;div&gt;</li>
+    
+    
+</ul>
+
+<p>The Solution</p>
+<ul>
+    <li>To solve this, HTML provides two special attributes: id and class. An id is a unique label meant for one specific element on the page, such as the navigation bar or a search form. On the other hand, a class is a reusable label that can be applied to multiple elements that share the same style or behavior, like all profile cards, all buttons, or all error messages. This targeting system makes it possible to style and organize your page with precision.</li>
+</ul>
+</p>
+
+<h2>
+    <ul>
+        <p>Analogy & Example</p>
+        <li>Think of an id like a Social Security Number or Aadhaar Number—it belongs to only one person and must be unique. A class, however, is like a job title such as “Engineer,” which many people in the same company can share. For instance, you might give every profile card the class profile-card but assign the special featured card the id featured.</li>
+    </ul>
+    <h1><table border="3">
+    <tr>
+        <td><img src="clas id.png" alt=" div image" height="300px" width="600px"></td>
+    </tr>
+   </table> </h1>
+</h2>
+<h2>
+    <p>Now in CSS, you can target them:</p>
+    <ul>
+        <li>main-header { ... } (Targets the one unique element with that ID)</li>
+        <li>profile-card { ... } (Targets ALL THREE elements with that class)</li>
+        <li>featured-profile { ... } (Targets only the one special card to give it a gold border)</li>
+    </ul>
+</h2>
+
+
+<h1>3. The &lt; span &gt; (The Inline Highlighter)</h1>
+<h2>
+    <p>The Problem
+</p>
+    <ul><li> 
+Sometimes, we need to style or label just a small part of text inside a sentence. For example, you may want to make a single word inside a paragraph red. If you try to wrap that word with a &lt; div &gt; , it creates a line break and ruins the sentence structure. This happens because &lt;div &gt;  is a block-level element, so it always starts on a new lin</li></ul>
+</h2>
+<h2>
+    <p>The Solution
+</p>
+    <ul><li> 
+To fix this, HTML gives us the&lt; span &gt; element. A &lt; span &gt; is just like a  &lt; div &gt; but it is inline, meaning it does not break the text flow. It allows you to wrap a single word, phrase, or any small piece of text inside a container without affecting the layout of the surrounding content. This makes it the perfect tool for highlighting or styling specific words.</li></ul>
+</h2>
+
+<h2>
+    <p>The Solution
+</p>
+    <ul><li> 
+To fix this, HTML gives us the&lt; span &gt; element. A &lt; span &gt; is just like a  &lt; div &gt; but it is inline, meaning it does not break the text flow. It allows you to wrap a single word, phrase, or any small piece of text inside a container without affecting the layout of the surrounding content. This makes it the perfect tool for highlighting or styling specific words.</li></ul>
+</h2>
+<h2><p>Example & Analogy</p>
+<ul><li>Here, only the word “important” is wrapped in a &lt; div &gt; and styled using the class highlight. The rest of the sentence remains intact. You can think of a &lt; span &gt;like a highlighter pen—you can mark a few words in a book without tearing out the whole page or putting it in a new box.</li></ul></h2>
+
+
+<h2>Related Semantic Tags
+    In addition to &lt; span &gt;nd &lt;div&lt;, HTML also provides semantic containers for structuring your page. The &lt; header &gt;is used for introductory content like a logo, navigation, or heading. The &lt;footer&lt;is for closing content such as copyright, contact info, or links. The &lt;main&lt;defines the central, unique content of the page (only one per page), separate from repeated elements like headers or footers. These tags make your content more meaningful and easier for browsers and search engines to understand.</h2>
+    <h1><table border="3">
+    <tr>
+        <td><img src="span.png" alt=" div image" height="300px" width="600px"></td>
+    </tr>
+   </table> </h1>
+
+
+
+   <h1>
+THE END
+
+<h1><table border="2">
+    <tr>
+        <td><a href="intro.html"><h1>BACK TO THE MAIN PAGE</a> </td>
+    </tr>
+   </table> </h1>
+</h1>
+<p> Copyright &copy; 2025 All Rights Reserved</p>
+</body>
+</html>

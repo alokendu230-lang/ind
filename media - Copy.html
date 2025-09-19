@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML NOTES</title>
+</head>
+<body>
+    <h1><table border="2">
+    <tr>
+        <td>HTML MEDIA AND MULTI-PAGE WEBSITE</td>
+    </tr>
+   </table> </h1>
+
+<h2>WHAT IS MULTIMEDIA?</h2>
+<h2>
+  
+
+Multimedia is the use of different types of content—like text, images, audio, video, and animations—together in one system.
+<ul><li>It makes information more interactive and engaging.
+</li>
+<li>Examples: Online videos, video games, websites with images and sound, presentations with animation.</li> </ul>
+
+
+ <p>In short: Multimedia = multiple types of media combined.</p>
+
+</h2>
+<h2>Browser Support
+<ul>
+    <li>The first web browsers could only show plain text, usually in one font and color.
+</li>
+    <li>Later browsers added support for colors, different fonts, images, and multimedia like audio and video</li>
+</ul>
+
+</h2>
+ <h2>Multimedia Formats</h2>
+<h2>
+    <ul>
+        <li>Multimedia elements like audio and video are stored in media files.</li>
+        <li>You can usually tell the type of file by its file extension.</li>
+        <li>Common formats include:</li>
+        <li>Audio: .wav, .mp3</li>
+        <li>Video: .mp4, .mpg, .wmv, .avi</li>
+    </ul>
+</h2>
+<h2>HTML VIDEO</h2>
+
+<h2>
+    <ul>
+        <li>
+        HTML allows you to embed videos directly into a webpage using the videotag.
+
+
+        </li>
+        <li>You don’t need extra plugins like Flash or QuickTime.
+
+</li>
+        <li>HTML video works on all modern browsers and on computers and phones.</li>
+    </ul>
+
+</h2>
+
+<h1><table border="2">
+    <tr>
+        <td><img src="video.png" alt="video image" height="300px" width="600px"></td>
+    </tr>
+   </table> </h1>
+
+<h2>HTML AUDIO</h2>
+<h2><ul>
+
+    <li>HTML allows you to play audio directly on a webpage using the <audio> tag.</li>
+    <li>No plugins needed, unlike older methods like Flash.</li>
+    <li>Works on computers, tablets, and mobile phones</li>
+    <li>Simple to control using attributes and multiple sources.</li>
+</ul></h2>
+<h1><table border="2">
+    <tr>
+        <td><img src="audio.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1>
+<h1>PROPER FORMATS FOR VIDEO AND AUDIO</h1>
+<h2>Part 1: The Basics - Getting a Video on the Page</h2>
+<h2><p>The video tag is used to add videos to a webpage. At its simplest, it only needs the video file’s source:</p></h2>
+<h2><table border="1">
+    <tr>
+        <td><img src="videotag.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h2>
+
+<h2>
+    <p>Problem: This only shows the first frame as a static image. You cannot play, pause, or adjust volume.
+
+
+</p>
+<p>Solution: Add the controls attribute to enable a built-in video player:
+</p>
+<h2><table border="1">
+    <tr>
+        <td><img src="vd.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h2>
+
+<h2>
+<ul>
+    <li>controls is a boolean attribute – just including it is enough to turn on the player features.
+
+</li>
+    <li>The video now has play/pause buttons, a timeline, volume control, and fullscreen</li>
+</ul>
+</h2>
+<h2>
+    <p>Part 2: Controlling Video with Attributes</p>
+
+    Once you have a video player, you can control its behavior and appearance using attributes:
+
+<ul><li>width and height -set the size of the player:</li></ul>
+<h1><table border="1">
+    <tr>
+        <td><img src="attribute.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1></h2>
+   <h2>
+<ul><li>autoplay - start playing automatically (usually needs muted for modern browsers):</li></ul>
+<h1><table border="1">
+    <tr>
+        <td><img src="mute.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1> <h2>
+<ul><li>loop-replay the video automatically when it ends.</li></ul>
+<ul><li>poster-show an image before the video starts:</li></ul>
+<h1><table border="1">
+    <tr>
+        <td><img src="control.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1>
+</h2>
+   
+<h2>Part 3:The Audio Tag</h2>
+
+<h2>
+<p>The (audio) tag works like video, but without visuals. Use it to embed music, podcasts, or sound files with controls:</p>
+   <h1><table border="1">
+    <tr>
+        <td><img src="audi.png" alt="audio image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1>
+<ul></ul></h2>
+<h2>
+        <li>Attributes like autoplay, loop, and muted work here too.</li>
+        <li>Result: A simple audio player with play/pause, timeline, and volume controls.</li>
+    </ul></h2>
+
+    <h2>Part 4: Advanced & Professional-  Solving Real-World Problems</h2>
+
+<h2>
+    <p>Why we use &lt;source &gt; inside &lt;video &gt; or &lt; audio &gt;
+<br>
+Because not all browsers support the same file format. Example:
+<ul><li>Chrome likes .webm</li>
+<li>Safari (iPhone/Mac) likes.mp4</li></ul>
+If you only give one file, some users may not be able to play it.</p>
+</h2>
+
+
+<h2>
+    
+        Solution: Use multiple &lt;source &gt;
+<ul>
+        <li>Put several &lt;source &gt;inside &lt;video &gt;
+</li>
+        <li>Each &lt;source &gt; give
+            <ul>
+                <li>src → file location</li>
+                <li>type → file format (so browser knows before downloading).</li>
+            </ul>
+        </li>    
+       <li>Browser will try sources in order and play the first one it supports.</li>
+    </ul>
+    <h1><table border="1">
+    <tr>
+        <td><img src="acess.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1>
+</h2>
+</h2>
+
+<h2>
+
+    <ul>
+        Problem:
+        <li>Deaf or hard-of-hearing users can’t follow your video.
+</li>
+        <li>People in noisy/quiet places can’t listen to the sound.
+</li>
+        <li>Non-English speakers may not understand the language</li>
+    </ul>
+</h2>
+
+
+<h2>
+Solution: Use (track)
+<p>The (track) tag adds subtitles/captions to your video.
+It uses a text file in WebVTT (.vtt) format.</p>
+</h2>
+
+<h1><table border="1">
+    <tr>
+        <td><img src="zz.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1>
+   <h2>
+       Key Attributes of <track>:
+
+    <ol>
+        <li>src → Path of the subtitle file (.vtt).
+</li>
+        <li>kind → What type of text?
+          <ul>
+            <li>captions → For people who can’t hear (includes sounds).
+</li>
+            <li>subtitles → Translation into another language.
+</li>
+            <li>descriptions → For visually impaired users (extra audio description).
+</li>
+          </ul>             
+        </li>
+        <li>srclang → Language code (e.g., en, es).
+</li>
+        <li>label → Name shown in the video player’s menu.
+</li>
+    </ol>
+   </h2>
+
+<h2>
+    The Robust & Professional Method (source)
+    <br><br>
+    <h1><table border="1">
+    <tr>
+        <td><img src="vid.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1>
+   <h2>
+Why Use <source> Instead of Just src?
+
+
+ <ul>
+        <li>
+Different browsers support different video formats.</li>
+        <li>(source) allows you to list multiple formats.</li>
+        <li>Browser will pick the first one it understands.</li>
+    </ul>
+</h2>
+
+
+<h2>
+    Common Formats:
+    <ol>
+        <li>.mp4 (H.264) → Works almost everywhere (best default).</li>
+        <li>.webm (VP8/VP9) → Open-source, great for Chrome & Firefox.</li>
+        <li>.ogg (Theora) → Older open-source option, less used today.
+</li>
+    </ol>
+</h2>
+
+<h2>
+    How It Works (Step by Step):
+    <ol>
+        <li>Browser checks the first <source> → movie.mp4.
+            <ul>
+                <li>If it can play → it uses this and ignores the rest.</li>
+                <li>If not → it moves to the next source.</li>
+            </ul>
+       
+       
+        </li>
+
+<li>Browser checks movie.ogg.
+    <ul>
+        <li>If it can play → it uses this.
+</li>
+        <li>If not → it looks for the next option.</li>
+    </ul>
+</li>
+
+<li>
+If none work → Shows the fallback message:
+<ul>
+    <li>"Your browser does not support the video tag."
+</li>
+</ul>
+</li>
+
+    </ol>
+Summary:
+<ul>
+    <li>Pros: Maximum browser compatibility. Professional approach.
+</li>
+    <li>Cons: You need to create and host videos in multiple formats.</li>
+</ul>
+</h2>
+<h2>
+    Video Embedding Methods in HTML
+    <ol>
+        <li> (source) Method (Professional)
+            <ul>
+                <li>Browser gets multiple options (mp4, webm, ogg).</li>
+                <li>It picks the first format it supports.
+</li>
+                <li>If none work → shows fallback message.
+</li>
+                <li></li>
+            </ul>
+        </li>
+    
+
+
+
+
+
+ Pros: Maximum compatibility, fallback support.
+ <br>
+ Cons: Needs multiple files
+. src Method (Simple)
+<li>
+    Browser gets one direct file (e.g., a.mp4).
+ <ul>
+    <li>If it supports → plays.</li>
+    <li>If not →  video fails (no fallback).
+</li>
+ </ul>
+</li>
+
+
+
+
+ Pros: Very simple, easy for quick use.
+<br> Cons: No backup option, risky for public sites.
+
+</ol>
+
+
+
+<table border="1">
+  Comparison Table
+  <tr>
+    <th>Feature</th>
+    <th>Example 1 (source Method)</th>
+    <th>Example 2 (src Method)</th>
+  </tr>
+  <tr>
+    <td>Browser Compatibility</td>
+    <td>Excellent. Provides multiple formats as fallbacks.</td>
+    <td>Good, but not guaranteed. Relies on a single format.</td>
+  </tr>
+  <tr>
+    <td>Flexibility</td>
+    <td>High. You can list many different formats.</td>
+    <td>Low. Only one format is possible.</td>
+  </tr>
+  <tr>
+    <td>Simplicity</td>
+    <td>More complex. Requires multiple lines and files.</td>
+    <td>Very simple. Requires only one line.</td>
+  </tr>
+  <tr>
+    <td>Fallback for Old Browsers</td>
+    <td>Excellent. Provides custom text if the &lt;video&gt; tag fails.</td>
+    <td>None.</td>
+  </tr>
+  <tr>
+    <td>Best Use Case</td>
+    <td>Public-facing websites where you need to support all users.</td>
+    <td>Quick tests, internal projects, or when you are 100% certain your target audience supports your one format.</td>
+  </tr>
+</table>
+
+</h2>
+<br>
+</h2>
+<h2>
+
+    Conclusion: Which Video Method to Use?
+<ul>
+    <li>
+For serious, public websites → Always use the <source> method (best practice, supports all browsers).
+    </li>
+    <li>
+For quick tests/internal projects → You can use the simple src method, but it’s a bit risky (no fallback).</li>
+</ul>
+<p>How to Write the Copyright Symbol in HTML</p>
+
+There are two main ways:
+<br>
+1. Using Entity Name (Recommended)
+<h1><table border="1">
+    <tr>
+        <td><img src="yyy.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1>
+   <h2>
+   <p>2. Using Entity Number
+
+Code:</p>
+<h1><table border="1">
+    <tr>
+        <td><img src="zzz.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1>
+   <table border="1">
+    <h1>
+  Other Common Symbol Entities You Should Know
+  <tr>
+    <th>Symbol</th>
+    <th>Description</th>
+    <th>Entity Name</th>
+    <th>Entity Number</th>
+  </tr>
+  <tr>
+    <td>©</td>
+    <td>Copyright</td>
+    <td>&amp;copy;</td>
+    <td>&amp;#169;</td>
+  </tr>
+  <tr>
+    <td>®</td>
+    <td>Registered Trademark</td>
+    <td>&amp;reg;</td>
+    <td>&amp;#174;</td>
+  </tr>
+  <tr>
+    <td>™</td>
+    <td>Trademark</td>
+    <td>&amp;trade;</td>
+    <td>&amp;#8482;</td>
+  </tr>
+  <tr>
+    <td>&lt;</td>
+    <td>Less-than (for showing code)</td>
+    <td>&amp;lt;</td>
+    <td>&amp;#60;</td>
+  </tr>
+  <tr>
+    <td>&gt;</td>
+    <td>Greater-than (for showing code)</td>
+    <td>&amp;gt;</td>
+    <td>&amp;#62;</td>
+  </tr>
+  <tr>
+    <td>&amp;</td>
+    <td>Ampersand</td>
+    <td>&amp;amp;</td>
+    <td>&amp;#38;</td>
+  </tr>
+  <tr>
+    <td>"</td>
+    <td>Double Quote</td>
+    <td>&amp;quot;</td>
+    <td>&amp;#34;</td>
+  </tr>
+  <tr>
+    <td>€</td>
+    <td>Euro Sign</td>
+    <td>&amp;euro;</td>
+    <td>&amp;#8364;</td>
+  </tr>
+</table></h1>
+   </h2>
+</h2>
+
+<h2>YouTube Video in HTML
+To play your video on a web page, do the following:
+
+<ul>
+    <li>Upload the video to YouTube
+</li>
+    <li>Take a note of the video id</li>
+    <li>Define an iframe element in your web page
+</li>
+    <li>Let the src attribute point to the video URL
+</li>
+    <li>Let the src attribute point to the video URL
+</li>
+<li>Let the src attribute point to the video URL</li>
+</ul>
+
+    <h1><table border="1">
+    <tr>
+        <td><img src="iframe.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1>
+
+
+<h2>YouTube Autoplay and Mute
+
+
+
+    <p>You can let your video start playing automatically when a user visits the page, by adding autoplay=1 to the YouTube URL. However, automatically starting a video is annoying for your visitors!
+<br></p>
+<p>Note: Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.</p>
+
+<p>Add mute=1 after autoplay=1 to let your video start playing automatically (but muted).</p>
+ <h1><table border="1">
+    <tr>
+        <td><img src="youtube.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1>
+
+
+</h2>
+
+<h2>
+
+    YouTube Playlist
+
+
+<p>YouTube Loop</p>
+<p>Add playlist=videoID and loop=1 to let your video loop forever.
+</p>
+<p>loop=0 (default) - The video will play only once.</p>
+<p>loop=1-The video will loop (forever).
+</p>
+
+
+<h1><table border="1">
+    <tr>
+        <td><img src="you.png" alt="video image" height="200px" width="600px"></td>
+    </tr>
+   </table> </h1>
+
+
+   
+
+
+
+
+
+</h2>
+
+<h2>CREATION OF MULTI-PAGE WESITE</h2>
+
+<h2>
+    <ul>
+    <li>To make a multi-page website (instead of just one page). In HTML, that’s pretty simple. Basically:
+</li>
+    <li>Create separate HTML files for each page (example: index.html, about.html, contact.html).</li>
+    <li>Link them together using the <a> tag (hyperlinks).
+</li>
+</ul>
+<h1><table border="1">
+    <tr>
+        <td><img src="z4.png" alt="video image" height="600px" width="900px"></td>
+    </tr>
+   </table> </h1>
+</h2>
+
+
+
+
+<h1>
+THE END
+
+<h1><table border="2">
+    <tr>
+        <td><a href="intro.html"><h1>BACK TO THE MAIN PAGE</a> </td>
+    </tr>
+   </table> </h1>
+</h1>
+
+
+
+
+
+
+
+
+<p> Copyright &copy; 2025 All Rights Reserved</p>
+
+
+
+</body>
+</html>
